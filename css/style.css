@@ -771,7 +771,7 @@ body.lock {
 .hero {
   padding: 10rem 0px;
   position: relative;
-  background: radial-gradient(837.78% 378.29% at 69.44% -79.86%, rgba(31, 35, 39, 0) 0%, #191C1F 47.89%, rgba(31, 35, 39, 0) 100%), url("../image/img/hero_bg.jpg");
+  background-image: radial-gradient(837.78% 378.29% at 69.44% -79.86%, rgba(31, 35, 39, 0) 0%, #191C1F 47.89%, rgba(31, 35, 39, 0) 100%), url("../image/img/hero_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -895,7 +895,7 @@ body.lock {
 }
 @media (max-width: 29.9375rem) {
   .hero {
-    padding: 6.875rem 0px 0.3125rem;
+    padding: 6.875rem 0px 1.3125rem;
   }
   .hero__title {
     font-size: 1.4375rem;
