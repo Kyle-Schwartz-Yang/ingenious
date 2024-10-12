@@ -1,9 +1,7 @@
 .horror {
   padding: 7.5rem 0px;
 
-  // .horror__container
-  &__container {}
-
+ 
   // .horror__inner
   &__inner {
     @include flex(center, center);
