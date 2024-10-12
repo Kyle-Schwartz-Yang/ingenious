@@ -907,3 +907,104 @@ body.lock {
     font-size: 0.625rem;
   }
 }
+.games {
+  padding: 3.125rem 0px;
+  background: #191C1F;
+}
+@media (max-width: 36rem) {
+  .games {
+    padding: 1.5625rem 0px;
+  }
+}
+@media (max-width: 29.9375rem) {
+  .games__title {
+    font-size: 1.875rem;
+    text-align: center;
+  }
+}
+.games__items.animation .games__item:nth-child(1) {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+.games__items.animation .games__item:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.games__items.animation .games__item:nth-child(3) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.games__items.animation .games__item:nth-child(4) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+.games__item {
+  opacity: 0;
+}
+.games__item.animation, .animation .games__item {
+  opacity: 1;
+  -webkit-transition: all 0.7s ease-in-out 0s;
+  transition: all 0.7s ease-in-out 0s;
+}
+@media (max-width: 68.75rem) and (min-width: 51.2488rem) {
+  .games__item:nth-child(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+  }
+}
+
+.item-games {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.25rem;
+  text-align: center;
+  border-radius: 0.625rem;
+}
+.item-games__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+}
+.item-games__icon:not(:last-child) {
+  margin-right: 1.25rem;
+}
+.item-games__icon img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.item-games__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.item-games__title:not(:last-child) {
+  margin-bottom: 0.3125rem;
+}
+@media (max-width: 29.9375rem) {
+  .item-games__title {
+    font-size: 1.875rem;
+    padding: 0.3125rem 0.9375rem;
+    text-align: center;
+  }
+}
+.item-games__text {
+  font-size: 0.875rem;
+  display: inline-block;
+  padding: 0px 0.3125rem;
+  background: -webkit-gradient(linear, right top, left top, color-stop(0, #9c1b82), to(#4e12b9));
+  background: linear-gradient(270deg, #9c1b82 0, #4e12b9 100%);
+  font-weight: 700;
+  line-height: 125%;
+  /* 30/24 */
+  text-transform: uppercase;
+}
