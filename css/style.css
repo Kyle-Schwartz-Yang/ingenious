@@ -181,21 +181,21 @@ img {
   background-color: #360985;
 }
 
-.hero__title {
+.guild__title, .hero__title {
   font-weight: 700;
   font-size: 64px;
   line-height: 117.1875%;
   text-transform: uppercase;
 }
 
-.hero__label {
+.guild__label, .hero__label {
   font-size: 14px;
   line-height: 111%;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.hero__text {
+.guild__text, .hero__text {
   font-weight: 400;
   font-size: 24px;
   line-height: 125%;
@@ -1561,4 +1561,133 @@ body.lock {
   background-color: rgba(100, 29, 225, 0.2);
   -webkit-transition: all 0.33s ease;
   transition: all 0.33s ease;
+}
+
+.guild {
+  padding: 5rem 0px;
+  background-image: url("../image/img/guild__bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+@supports (background-image: url("../image/img/guild__bg.webp")) {
+  .guild {
+    background: radial-gradient(837.78% 378.29% at 69.44% -79.86%, rgba(31, 35, 39, 0) 0%, #191C1F 47.89%, rgba(31, 35, 39, 0) 100%), url("../image/img/guild__bg.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.guild__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.guild__label {
+  opacity: 0;
+  -webkit-transform: translate(0, 2.75rem);
+          transform: translate(0, 2.75rem);
+}
+.guild__label.animation, .animation .guild__label {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+  -webkit-transition: all 0.7s ease-in-out 0s;
+  transition: all 0.7s ease-in-out 0s;
+}
+.guild__label:not(:last-child) {
+  margin: 0px 0px 0.3125rem 0px;
+}
+.guild__title {
+  opacity: 0;
+  -webkit-transform: translate(0, 2.75rem);
+          transform: translate(0, 2.75rem);
+  max-width: 46.625rem;
+  text-align: center;
+}
+.guild__title.animation, .animation .guild__title {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+  -webkit-transition: all 0.7s ease-in-out 0s;
+  transition: all 0.7s ease-in-out 0s;
+}
+.guild__title:not(:last-child) {
+  margin: 0px 0px 0.625rem 0px;
+}
+.guild__text {
+  opacity: 0;
+  -webkit-transform: translate(0, 2.75rem);
+          transform: translate(0, 2.75rem);
+  text-align: center;
+  max-width: 746px;
+  /* 30/24 */
+}
+.guild__text.animation, .animation .guild__text {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+  -webkit-transition: all 0.7s ease-in-out 0s;
+  transition: all 0.7s ease-in-out 0s;
+}
+.guild__text:not(:last-child) {
+  margin: 0px 0px 1.875rem 0px;
+}
+.guild__btn {
+  opacity: 0;
+  -webkit-transform: translate(0, 2.75rem);
+          transform: translate(0, 2.75rem);
+}
+.guild__btn.animation, .animation .guild__btn {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+  -webkit-transition: all 0.7s ease-in-out 0s;
+  transition: all 0.7s ease-in-out 0s;
+}
+.guild__btn:not(:last-child) {
+  margin: 0px 0px 0.9375rem 0px;
+}
+
+@media (max-width: 36rem) {
+  .guild {
+    padding: 2.5rem 0px;
+  }
+  .guild__label {
+    font-size: 0.8125rem;
+  }
+  .guild__title {
+    font-size: 2.75rem;
+    line-height: 100%;
+  }
+  .guild__title:not(:last-child) {
+    margin: 0px 0px 0.9375rem 0px;
+  }
+}
+@media (max-width: 29.9375rem) {
+  .guild {
+    padding: 1.875rem 0px;
+  }
+  .guild__title {
+    font-size: 1.875rem;
+  }
+  .guild__text {
+    font-size: 0.875rem;
+  }
+  .guild__text:not(:last-child) {
+    margin: 0px 0px 1.25rem 0px;
+  }
+  .guild__btn {
+    font-size: 0.625rem;
+  }
 }
