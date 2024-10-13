@@ -1346,10 +1346,10 @@ body.lock {
   .mmorpg__image {
     min-height: 13.75rem;
   }
-
+}
 .guild {
   padding: 5rem 0px;
-  background-image: url("../image/img/guild__bg.jpg");
+  background-image: url("../image/img/guild_bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
