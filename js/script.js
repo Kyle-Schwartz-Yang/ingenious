@@ -31,6 +31,64 @@ menuLinks.forEach(link => {
 
 
 
+//*header hidden - header visibility
+let prevScrollPos = window.pageYOffset;
+
+window.addEventListener("scroll", function () {
+  const currentScrollPos = window.pageYOffset;
+
+  if (currentScrollPos > prevScrollPos) {
+    // Прокрутка вниз - скрываем шапку
+    document.querySelector(".header").classList.add("fixed");
+  } else {
+    // Прокрутка вверх или стоим на месте - показываем шапку
+    document.querySelector(".header").classList.remove("fixed");
+  }
+
+  prevScrollPos = currentScrollPos;
+});
+
+
+//*Плавная прокрутка сайта
+const anchors = document.querySelectorAll('.menu__link');
+anchors.forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const anchorId = anchor.dataset.goto;
+    const anchorBlock = document.getElementById(`${anchorId}`);
+
+
+    if (anchorId && anchorBlock) {
+      const headerHeight = document.querySelector('.header').offsetHeight;
+      const gotoBlockScroll = anchorBlock.getBoundingClientRect().top + window.scrollY;
+
+      if (menuBody.classList.contains('_active')) {
+        toggleMenu();
+      }
+
+      window.scrollTo({ behavior: "smooth", top: gotoBlockScroll, });
+
+      e.preventDefault();
+    }
+  });
+});
+
+
+//* Удалить классы при нажатие на ссылку.
+menuBody.querySelectorAll('.menu__link').forEach(menuLink => {
+  menuLink.addEventListener('click', () => {
+    // toggleMenu();
+    iconMenu.classList.remove('_active');
+    menuBody.classList.remove('_active');
+    bodyLock.classList.remove('lock');
+  });
+});
+
+
+
+
+
+
+
 //* ------------------------------------------------------ANIMATION ( START )
 
 const animItems = document.querySelectorAll('.animation-items');
