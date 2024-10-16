@@ -1,5 +1,7 @@
 .guild {
-  padding: 5rem 0px;
+  // padding: 5rem 0px;
+  padding: 10rem 0px;
+  height: 100vh;
   background-image: url('../image/img/guild_bg.jpg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -18,11 +20,17 @@
   }
 
   // .guild__container
-  &__container {}
+  &__container {
+    height: 100%;
+    width: 100%;
+  }
 
   //.guild__body
   &__body {
     @include flex(center, center);
+  
+    height: 100%;
+    width: 100%;
     flex-direction: column;
     // max-width: 746px;
     // margin: 0 auto;
@@ -76,9 +84,15 @@
 }
 
 
+@media (max-width: 992px) {
+
+}
+
+
 @media (max-width: 36rem) {
   .guild {
     padding: 2.5rem 0px;
+
 
     &__label {
       font-size: .8125rem;
@@ -100,8 +114,7 @@
   .guild {
 
     padding: 1.875rem 0px;
-
-
+  
     &__title {
       font-size: 1.875rem;
     }
